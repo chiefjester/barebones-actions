@@ -10,6 +10,7 @@ action "action-filter" {
 }
 
 action "Do The Thing" {
+  needs = "action-filter"
   uses = "docker://alpine"
   runs = "echo"
   args = "do the thing"
